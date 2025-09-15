@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.credentials.CredentialManager
+import com.github.se.bootcamp.ui.GreetingScreen
 import com.github.se.bootcamp.ui.theme.BootcampTheme
 import okhttp3.OkHttpClient
 
@@ -52,11 +53,15 @@ class MainActivity : ComponentActivity() {
  */
 @Composable
 fun BootcampApp(
+
     context: Context = LocalContext.current,
     credentialManager: CredentialManager = CredentialManager.create(context)
 ) {
   // TODO: Add your app implementation here
-  Scaffold(
+  /*Scaffold(
       modifier = Modifier.fillMaxSize(),
       content = { pd -> Text(text = "Hello World!", modifier = Modifier.padding(pd)) })
+   */
+    GreetingScreen()
 }
+
